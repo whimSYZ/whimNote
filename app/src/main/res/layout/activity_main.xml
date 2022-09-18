@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <!--    <ImageView-->
+    <!--            android:id="@+id/pdfImage"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:background="@android:color/white"-->
+    <!--            android:contentDescription="@null"-->
+    <!--            android:scaleType="fitCenter" />-->
+    <LinearLayout
+            android:id="@+id/pdfLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteY="0dp" tools:layout_editor_absoluteX="0dp"/>
+    <TextView
+            android:text="Page: "
+            android:layout_width="92dp"
+            android:layout_height="26dp" android:id="@+id/pageView" android:gravity="bottom|right"
+            app:layout_constraintBottom_toBottomOf="@+id/pdfLayout"
+            app:layout_constraintEnd_toEndOf="@+id/pdfLayout"
+            android:translationX="-10dp" android:translationY="-100dp"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:translationY="30dp"
+    >
+        <TextView
+                android:text="shannon1948.pdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView" android:paddingLeft="20dp"/>
+        <Space
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"/>
+        <ImageButton
+                android:layout_width="32dp"
+                android:layout_height="32dp" app:srcCompat="@drawable/ic_rotate_left_solid"
+                android:id="@+id/undoButton"
+                android:scaleX="1" android:scaleType="centerInside"
+                android:onClick="onUndo" android:background="#00FFFFFF" android:layout_weight="1"/>
+        <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" android:layout_weight="1"/>
+        <ImageButton
+                android:layout_width="32dp"
+                android:layout_height="32dp" app:srcCompat="@drawable/ic_rotate_right_solid"
+                android:id="@+id/redoButton"
+                android:scaleX="1" android:scaleType="centerInside"
+                android:onClick="onRedo" android:background="#00FFFFFF" android:layout_weight="1"/>
+        <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" android:layout_weight="1"/>
+        <ImageButton
+                android:layout_width="32dp"
+                android:layout_height="32dp" app:srcCompat="@drawable/ic_pencil_solid"
+                android:id="@+id/pencilButton"
+                android:scaleX="1" android:scaleType="centerInside"
+                android:onClick="onPencilClick" android:background="#00FFFFFF"/>
+        <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" android:layout_weight="1"/>
+        <ImageButton
+                android:layout_width="32dp"
+                android:layout_height="32dp" app:srcCompat="@drawable/ic_eraser_solid"
+                android:id="@+id/eraseButton"
+                android:scaleX="1" android:scaleType="centerInside"
+                android:onClick="onEraseClick" android:background="#00FFFFFF"/>
+        <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" android:layout_weight="1"/>
+        <ImageButton
+                android:layout_width="32dp"
+                android:layout_height="32dp" app:srcCompat="@drawable/ic_marker_solid"
+                android:id="@+id/markerButton"
+                android:scaleX="1" android:scaleType="centerInside"
+                android:onClick="onMarkerClick"
+                android:adjustViewBounds="false" android:background="#00FFFFFF"/>
+        <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" android:layout_weight="1"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
